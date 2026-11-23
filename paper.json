@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 101292,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "de580ae84bb4768c5f16ed6375b057e05a3d7c47c188dc587f18d9fc9062e09d",
+      "sha256": "de580ae84bb4768c5f16ed6375b057e05a3d7c47c188dc587f18d9fc9062e09d"
+    },
+    "source": {
+      "bytes": 116970,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "497b92e2579b2c3a7b8ad2df6725b552d681c7cc69c2a16f2b780205f00ed5cd",
+      "sha256": "497b92e2579b2c3a7b8ad2df6725b552d681c7cc69c2a16f2b780205f00ed5cd"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Li–Poon–Sze's equal-dimensional answer (2011, Theorem 2.4), we answer yes to their open problem (P2), arXiv:1103.2499v2, p. 4, for every 2 <= m < n and 2 <= l <= m^2, by combining a covariance bound with explicit positive block states. The maximal degree-l elementary symmetric function of realignment singular values over separable states is strictly smaller than its maximum over states satisfying the realignment criterion. The original question is Lupo–Aniello–Scardicchio (2008), Section 6, p. 15, item (ii). One matrix works simultaneously at every nontrivial degree, and small white-noise mixtures give full-rank examples strictly inside the realignment constraint.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 101292,
+      "sha256": "de580ae84bb4768c5f16ed6375b057e05a3d7c47c188dc587f18d9fc9062e09d",
+      "url": "/api/v1/collected-papers/li-poon-sze-2011-p2-realignment-gap/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T22:16:59.929144535Z",
+    "record": "li-poon-sze-2011-p2-realignment-gap",
+    "repository_name": "li-poon-sze-2011-p2-realignment-gap",
+    "source": {
+      "bytes": 116970,
+      "sha256": "497b92e2579b2c3a7b8ad2df6725b552d681c7cc69c2a16f2b780205f00ed5cd",
+      "url": "/api/v1/collected-papers/li-poon-sze-2011-p2-realignment-gap/files/source?version=3"
+    },
+    "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T22:16:59.929144535Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "li-poon-sze-2011-p2-realignment-gap"
+  }
+}

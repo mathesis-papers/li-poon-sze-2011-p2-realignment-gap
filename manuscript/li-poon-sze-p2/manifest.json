@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "name": "note.tex",
+      "bytes": 25857,
+      "sha256": "e5286474fe75c3733d6dbbd45527fab59c8a64632375e882a7e714ced7086e0c"
+    },
+    {
+      "name": "note.pdf",
+      "bytes": 101292,
+      "sha256": "de580ae84bb4768c5f16ed6375b057e05a3d7c47c188dc587f18d9fc9062e09d"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3910,
+      "sha256": "69f3af4252d659b4ca29274805df519b0ecd0e530b316feec74fe090b7b4092b"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 4737,
+      "sha256": "17c3db95b12e2763e5a7ac4ee3fec1465f81144a9a0a80fcb924b0fd0e059d94"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 8752,
+      "sha256": "713aa6d5228f1fe9772c3379d2968c498e421f1c7645be550a7bcb9ef8bb31e4"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 5246,
+      "sha256": "730b17450401415ecb79d9dbacebe33b8f42bdfb35338e1a9a6439006deae2f2"
+    }
+  ]
+}

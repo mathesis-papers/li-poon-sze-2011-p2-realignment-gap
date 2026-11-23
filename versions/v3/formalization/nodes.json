@@ -1,0 +1,340 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s1",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "Let $2\\le m<n$, $k=m^2$, and $2\\le\\ell\\le k$. Define\n\\begin{equation}\n a=\\begin{cases}\n 1/\\sqrt{mn},&n<m^3-m,\\\\\n 1/(m\\sqrt{m^2-1}),&m^3-m\\le n<m^3,\\\\\n 1/m^2,&n\\ge m^3.\n \\end{cases}\n\\end{equation}\nThere is a density matrix $\\rho$ with realignment singular values\n$(a,b_a,\\ldots,b_a)$ and trace norm one. Moreover,\n\\begin{equation}\n B_\\ell(m,n)\\le\\F(\\delta)<\\F(a)\n =\\e_\\ell(s(\\R(\\rho)))\\le\\widetilde B_\\ell(m,n).\n\\end{equation}\nThe same $\\rho$ works for every $\\ell=2,\\ldots,m^2$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s2",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "For a separable state $\\sigma$, its realignment singular values satisfy\n\\[\n \\sum_{j=1}^k s_j\\le1,\\qquad\n \\sum_{j=2}^k s_j\\le\\sqrt{(1-1/m)(1-1/n)}=1-\\delta.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s3",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "If $s_1\\ge\\cdots\\ge s_k\\ge0$, $\\sum_j s_j\\le1$, and\n$\\sum_{j\\ge2}s_j\\le1-\\delta$, where $1/k<\\delta<1$, then\n$\\e_\\ell(s)\\le\\F(\\delta)$ for $2\\le\\ell\\le k$.\nThe function $\\F$ is strictly decreasing on $[1/k,1)$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s4",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "For each $2\\le m<n$ there is an entangled state satisfying CCNR whose\ndegree-$\\ell$ realignment elementary symmetric function exceeds the\nseparable maximum simultaneously for all $\\ell=2,\\ldots,m^2$.\nFor degree one, $B_1(m,n)=\\widetilde B_1(m,n)=1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s5",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "For $m,n\\ge2$ and $2\\le\\ell\\le\\min(m,n)^2$, the answer to (P2) is\nyes exactly when $m\\ne n$. If $m=n$, then\n\\[\n B_\\ell(m,m)=\\widetilde B_\\ell(m,m)\n =\\F(1/m),\\qquad k=m^2.\n\\]\nIn particular, the exact values at $m=n=2$ and degrees $1,2,3,4$ are\n$1,1/3,5/108,1/432$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s6",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "Let $2\\le m\\le n$ and $2\\le\\ell\\le k=m^2$. The naive CCNR upper\nbound $\\binom{k}{\\ell}k^{-\\ell}$ is attained if and only if $n\\ge m^3$.\nFor $n<m^3$, writing $\\alpha=1/\\sqrt{mn}$ gives\n\\[\n \\widetilde B_\\ell(m,n)\\le\\F(\\alpha)\n <\\binom{k}{\\ell}k^{-\\ell}.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s7",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "In every unequal dimension pair there are positive definite density matrices\nwith $\\|\\R(\\rho)\\|_1<1$ and\n$\\e_\\ell(s(\\R(\\rho)))>B_\\ell(m,n)$ simultaneously for all\n$2\\le\\ell\\le\\min(m,n)^2$.\nMore precisely, for $m<n$, take the witness of Theorem~\\ref{main} and put\n\\[\n \\varepsilon_0=\\frac12\\min_{2\\le\\ell\\le k}\n \\frac{1- F_{k,\\ell}(\\delta)/F_{k,\\ell}(a)}{\\ell}>0.\n\\]\nEvery $\\rho_\\varepsilon=(1-\\varepsilon)\\rho+\n\\varepsilon I_{mn}/(mn)$ with $0<\\varepsilon\\le\\varepsilon_0$\nhas these properties.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:li-poon-sze-2011-p2-realignment-gap:3:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
+      },
+      "lineage": "collected:li-poon-sze-2011-p2-realignment-gap:s8",
+      "macros": {
+        "\\F": "F_{k,\\ell}",
+        "\\R": "\\mathcal R",
+        "\\e": "e",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "li-poon-sze-2011-p2-realignment-gap",
+      "scope": "in_scope",
+      "statement": "For every $2\\le m<n$ there is a channel $\\Phi:M_m(\\mathbb C)\\to\nM_n(\\mathbb C)$ which is not entanglement breaking, although its\nHilbert--Schmidt matrix has singular-value sum at most $m$.\nAt every degree $2\\le\\ell\\le m^2$, its elementary symmetric value\nexceeds the upper bound $m^\\ell F_{m^2,\\ell}(\\delta)$ valid for\nentanglement-breaking channels. The sum can be made strictly smaller\nthan $m$, with a positive definite normalized Choi matrix.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+      "toolchain": null,
+      "version": 3,
+      "work": "li-poon-sze-2011-p2-realignment-gap"
+    }
+  ]
+}

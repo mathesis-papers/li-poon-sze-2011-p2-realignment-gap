@@ -1,0 +1,30 @@
+{
+  "id": "li-poon-sze-2011-p2-realignment-gap",
+  "revision": 3,
+  "problem_ids": ["li-poon-sze-2011-p2-realignment-gap"],
+  "topic": "Problem (P2) on strict elementary-symmetric realignment separation in unequal local dimensions",
+  "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Li–Poon–Sze's equal-dimensional answer (2011, Theorem 2.4), we answer yes to their open problem (P2), arXiv:1103.2499v2, p. 4, for every 2 <= m < n and 2 <= l <= m^2, by combining a covariance bound with explicit positive block states. The maximal degree-l elementary symmetric function of realignment singular values over separable states is strictly smaller than its maximum over states satisfying the realignment criterion. The original question is Lupo–Aniello–Scardicchio (2008), Section 6, p. 15, item (ii). One matrix works simultaneously at every nontrivial degree, and small white-noise mixtures give full-rank examples strictly inside the realignment constraint.",
+  "summary": "A written proof of strict unequal-dimensional realignment separation, the complete equal/unequal dimension dichotomy, credited sharp naive-bound thresholds, explicit extremal brackets, a positive-definite white-noise family strictly inside CCNR, and corresponding non-entanglement-breaking channels.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806",
+  "posing_sources": [
+    {"url": "https://arxiv.org/abs/1103.2499v2", "locator": "p. 4, Problem (P2)"},
+    {"url": "https://arxiv.org/abs/0802.2019v2", "locator": "Section 6, p. 15, item (ii)"}
+  ],
+  "coverage": {
+    "written_proof": "All unequal local dimensions >=2 and degrees 2 through the square of the smaller dimension; one explicit matrix works for every degree. The full-rank corollary gives a quantified positive-definite white-noise family with strict CCNR inequality. The channel corollary uses their maximally mixed input marginals and normalized Choi correspondence. Equal-dimensional equality and the naive-bound threshold are reproved with credit to the posing sources.",
+    "formal_statement": "LiPoonSzeP2.result: for every m,n,l in range, there exists an actual density matrix with realignment trace norm at most one and strict degree-l separation from every separable state. Its quantifier order is forall m,n,l exists rho. The companion witness declarations specify spectra independently of l. The white-noise extension, channel consequence and equal-dimensional averaging are written proofs.",
+    "finite_checks": "Twelve exact row-Gram matrix examples: six boundary witnesses and their six white-noise mixtures at weight 1/1000, including their maximally mixed Alice marginals. Exact rational interval separation at all nontrivial degrees, with outward 70-decimal-place square-root enclosures; symbolic trace, Gram and noise identities; profile derivatives at sizes 4 through 17; 42826 integer dimension/sector pairs with 2 <= m <= 50; exact two-qubit maxima.",
+    "remaining_mathematics": "The bounds do not determine exact unequal-dimensional separable maxima or exact CCNR-constrained maxima in m^3-m/2 < n < m^3, including (3,26). The stronger unrestricted extension of Peled et al.'s Theorem 1 is not covered."
+  },
+  "formal_sources": [
+    {"url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean", "sha256": "7734ed25029cf4e322be0281b4357fa97b8233ea812078ba445fdcbf9cdfcf39", "declarations": ["LiPoonSzeP2.result", "LiPoonSzeP2.main_witness", "LiPoonSzeP2.supported_witness", "LiPoonSzeP2.uniform_witness"]},
+    {"url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/RealignmentSchurBound.lean", "sha256": "ecd38c569151ebaa2c0299ee7e64b58f75bd246edb67c6166005dc6f5648a235", "declarations": ["RealignmentSchurBound.separable_esymm_bound"]},
+    {"url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/CorrelationMinorNormCovariance.lean", "sha256": "ebfe7b8b7779e77e92c625b9b21a06ea55e690a28015923230696707748978fd", "declarations": ["CorrelationMinorNormCovariance.actual_covariance_nuclear", "CorrelationMinorNormCovariance.correlation_tail_purity"]}
+  ]
+}

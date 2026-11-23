@@ -1,0 +1,565 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\R}{\mathcal R}
+\newcommand{\e}{e}
+\newcommand{\F}{F_{k,\ell}}
+\title{Extending Li--Poon--Sze's elementary-symmetric\newline
+realignment comparison to unequal dimensions}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{November 16, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Li--Poon--Sze's equal-dimensional answer (2011, Theorem~2.4),
+we answer yes to their open problem (P2), arXiv:1103.2499v2, p.~4,
+for every $2\le m<n$ and $2\le\ell\le m^2$, by combining a covariance
+bound with explicit positive block states.
+The maximal degree-$\ell$ elementary symmetric function of realignment
+singular values over separable states is strictly smaller than its maximum
+over states satisfying the realignment criterion. The original question
+is Lupo--Aniello--Scardicchio (2008), Section~6, p.~15, item~(ii).
+One matrix works simultaneously at every nontrivial degree, and small
+white-noise mixtures give full-rank examples strictly inside the
+realignment constraint.
+\end{abstract}
+
+\section{The question and the answer}
+Li, Poon and Sze formulate two open problems, (P1) and (P2), in
+\cite[p.~4]{LPS}. Their wording for (P2) is ``To determine if
+$\widetilde B_\ell(m,n)>B_\ell(m,n)$.'' The comparison is between
+separable states and states allowed by the computable cross-norm or
+realignment (CCNR) criterion. They prove equality in equal dimensions
+\cite[Theorem~2.4]{LPS}. We prove strict inequality in every unequal
+dimension pair. The original question is item~(ii) in
+\cite[Section~6, p.~15]{LAS}; its notation $(d,D)$ corresponds to
+$(m^2,n^2)$ here.
+
+A density matrix on $\mathbb C^m\otimes\mathbb C^n$ is a positive
+semidefinite $mn\times mn$ matrix of trace one. It is separable if it is a
+finite convex combination of product density matrices. In product bases,
+define the $m^2\times n^2$ realignment by
+\[
+ \R(\rho)_{(i,j),(a,b)}=\rho_{(i,a),(j,b)}.
+\]
+Write $s_1\ge\cdots\ge s_k\ge0$ for its $k=m^2$ singular values,
+including zeros, and $\|\R(\rho)\|_1=\sum_j s_j$ for its trace norm.
+For a nonnegative vector $s$, let
+\[
+ \e_\ell(s)=\sum_{j_1<\cdots<j_\ell}s_{j_1}\cdots s_{j_\ell}.
+\]
+Following \cite{LPS}, write $B_\ell(m,n)$ for the maximum of this
+function over separable states and $\widetilde B_\ell(m,n)$ for its
+maximum over density matrices satisfying $\|\R(\rho)\|_1\le1$.
+These maxima exist: both state sets are compact in finite dimensions,
+and the spectral function is continuous.
+
+For $0\le x\le1$, put $b_x=(1-x)/(k-1)$ and
+\begin{equation}\label{profile}
+ \F(x)=\binom{k-1}{\ell}b_x^\ell+
+ x\binom{k-1}{\ell-1}b_x^{\ell-1},\qquad
+ \delta=1-\sqrt{(1-1/m)(1-1/n)}.
+\end{equation}
+A binomial coefficient is zero when its lower index exceeds its upper
+index.
+
+\begin{theorem}\label{main}
+Let $2\le m<n$, $k=m^2$, and $2\le\ell\le k$. Define
+\begin{equation}\label{choose-a}
+ a=\begin{cases}
+ 1/\sqrt{mn},&n<m^3-m,\\
+ 1/(m\sqrt{m^2-1}),&m^3-m\le n<m^3,\\
+ 1/m^2,&n\ge m^3.
+ \end{cases}
+\end{equation}
+There is a density matrix $\rho$ with realignment singular values
+$(a,b_a,\ldots,b_a)$ and trace norm one. Moreover,
+\begin{equation}\label{gap}
+ B_\ell(m,n)\le\F(\delta)<\F(a)
+ =\e_\ell(s(\R(\rho)))\le\widetilde B_\ell(m,n).
+\end{equation}
+The same $\rho$ works for every $\ell=2,\ldots,m^2$.
+\end{theorem}
+
+The density-matrix family and the low- and high-dimensional constructions
+are due to Li--Poon--Sze \cite[proof of Theorem~2.3]{LPS}. The covariance
+estimate used below is due to Zhang, Zhang, Zhang and Guo
+\cite[Theorem~1]{ZZZG}. The combination gives an explicit separable
+upper bound and a strictly larger attainable value. In the middle range,
+an occupied tensor block with a zero complement supplies the needed witness.
+Related elementary-symmetric bounds appear in Peled, Te'eni, Carmi and
+Cohen's correlation-minor framework \cite[Theorem~1]{PTCC}, with a
+filter-normal-form hypothesis. The bound below applies directly to all
+separable states; it differs from their proposed extension of that bound
+beyond filter normal form.
+
+Aniello and Lupo \cite[Section~4, pp.~6--8]{AL} also formulate the
+question of stricter elementary-symmetric bounds independent of CCNR;
+the unequal-dimensional witnesses here answer that question affirmatively.
+Gittsovich, G\"uhne, Hyllus and Eisert
+\cite[Proposition~IV.2 and Remark~IV.3]{GGHE} recover the covariance
+estimate from their covariance-matrix criterion. Their reduced correlation
+block bound (Proposition~IV.4) concerns deletion of the identity row and
+column; the tail bound below instead concerns the full realignment spectrum.
+The multipartite correlation-minor bounds of Lenny et al.
+\cite[Theorems~1--4]{LTPCC} retain filter-normal-form or strong
+filter-normal-form assumptions.
+
+Deside, Kala and Cerf \cite[Appendix~D, equations~(D23)--(D35)]{DKC}
+use elementary symmetric functions through Newton identities in a
+different family of realignment-moment criteria. Their comparison is
+between singular moments and weak moments of the realigned operator;
+combined with the CCNR inequality it gives necessary separability
+conditions. Here the comparison is between two constrained maxima, and
+the witnesses satisfy CCNR while exceeding every higher-degree separable
+profile bound.
+
+\section{A separable spectral bound}
+\begin{lemma}\label{tail}
+For a separable state $\sigma$, its realignment singular values satisfy
+\[
+ \sum_{j=1}^k s_j\le1,\qquad
+ \sum_{j=2}^k s_j\le\sqrt{(1-1/m)(1-1/n)}=1-\delta.
+\]
+\end{lemma}
+\begin{proof}
+Write $\sigma=\sum_h p_h A_h\otimes B_h$, where $p_h\ge0$,
+$\sum_h p_h=1$, and $A_h,B_h$ are density matrices. Let $A=\sum_h p_hA_h$
+and $B=\sum_h p_hB_h$ be the marginals. Use row vectorization, written
+as a column $\operatorname{vec}(\cdot)$. The trace norm of
+$xy^T$ is $\|x\|_2\|y\|_2$, also for complex vectors. Thus the triangle
+inequality and $\tr A_h^2,\tr B_h^2\le1$ give the first bound.
+Also,
+\[
+ \R(\sigma)-\operatorname{vec}(A)\operatorname{vec}(B)^T
+ =\sum_h p_h\operatorname{vec}(A_h-A)
+                  \operatorname{vec}(B_h-B)^T.
+\]
+Cauchy--Schwarz gives
+\begin{align*}
+ \|\R(\sigma-A\otimes B)\|_1
+ &\le\sqrt{\Bigl(\sum_h p_h\tr A_h^2-\tr A^2\Bigr)
+                   \Bigl(\sum_h p_h\tr B_h^2-\tr B^2\Bigr)}\\
+ &\le\sqrt{(1-\tr A^2)(1-\tr B^2)}.
+\end{align*}
+This is the covariance estimate in \cite[Theorem~1]{ZZZG}.
+For any rectangular matrix $C$ and rank-at-most-one matrix $D$,
+$s_{j+1}(C)\le s_j(C-D)$: in the min--max formula for singular values,
+intersect a test subspace with $\ker D$, losing at most one dimension.
+Summing gives $\sum_{j\ge2}s_j(C)\le\|C-D\|_1$.
+Apply this with $D=\operatorname{vec}(A)\operatorname{vec}(B)^T$.
+Finally, the eigenvalues of a density matrix of order $m$ sum to one,
+so Cauchy--Schwarz gives $\tr A^2\ge1/m$; similarly $\tr B^2\ge1/n$.
+\end{proof}
+
+\begin{lemma}\label{scalar}
+If $s_1\ge\cdots\ge s_k\ge0$, $\sum_j s_j\le1$, and
+$\sum_{j\ge2}s_j\le1-\delta$, where $1/k<\delta<1$, then
+$\e_\ell(s)\le\F(\delta)$ for $2\le\ell\le k$.
+The function $\F$ is strictly decreasing on $[1/k,1)$.
+\end{lemma}
+\begin{proof}
+Increase the first coordinate to $x=1-\sum_{j\ge2}s_j\ge\delta$.
+Every elementary symmetric function is coordinatewise nondecreasing.
+For a fixed tail sum, replacing two tail coordinates $u,v$ by their mean
+preserves the terms linear in $u,v$ and increases their product by
+$(u-v)^2/4$. Its coefficient is the nonnegative elementary symmetric
+function of degree $\ell-2$ in the remaining coordinates. Successive
+averaging, and continuity, therefore bound the resulting vector by the
+equal-tail value $\F(x)$. Direct differentiation yields
+\[
+ \F'(x)=\frac{\ell-1}{k-1}\binom{k-1}{\ell-1}
+ b_x^{\ell-2}(b_x-x).
+\]
+This is negative for $1/k<x<1$. The endpoint $x=1$ follows by continuity.
+\end{proof}
+
+For the dimensions of Theorem~\ref{main}, $\delta<1$, and
+\begin{equation}\label{delta-half}
+ \delta>1-\sqrt{1-1/m}>\frac1{2m}\ge\frac1{m^2}.
+\end{equation}
+The middle inequality follows by squaring
+$\sqrt{1-1/m}<1-1/(2m)$; both sides are nonnegative.
+Lemmas~\ref{tail} and~\ref{scalar} prove the first inequality in
+\eqref{gap}.
+
+\section{Positive witnesses and their complete spectra}
+Split Bob's space as $(\mathbb C^m\otimes\mathbb C^q)\oplus\mathbb C^r$.
+Let $P$ and $Q$ be the projections onto these summands. For
+$h=1,\ldots,q$, set
+\[
+ \Omega_h=\sum_{i=1}^m |i\rangle\otimes(|i\rangle\otimes|h\rangle),
+ \quad E=\sum_{h=1}^q|\Omega_h\rangle\langle\Omega_h|,
+ \quad \rho(t,u,v)=tE+I_m\otimes(uP+vQ).
+\]
+For $t,u,v\ge0$ this matrix is positive semidefinite, and
+\begin{equation}\label{trace}
+ \tr\rho=mq(t+mu)+mr v.
+\end{equation}
+Let $d=\operatorname{vec}(I_m)$, so $d^*d=m$. Writing
+$C=\R(\rho)$, direct multiplication gives
+\begin{equation}\label{gram}
+ CC^*=\mu I_{m^2}+\nu dd^*,\qquad
+ \mu=qt^2,\quad \nu=q(2tu+mu^2)+rv^2.
+\end{equation}
+For completeness, an occupied entry in column $((a,p),(b,h))$ is
+$\delta_{ph}(t\delta_{ia}\delta_{jb}
++u\delta_{ij}\delta_{ab})$ in row $(i,j)$; an unused entry in column
+$(a,b)$ is $v\delta_{ij}\delta_{ab}$, and mixed entries vanish.
+The $tt$, $tu$, $uu$, and $vv$ products are respectively
+$qt^2I$, $2qtu\,dd^*$, $qmu^2dd^*$, and $rv^2dd^*$,
+which proves \eqref{gram}. Its eigenvalues are
+\begin{equation}\label{eigen}
+ \mu\quad(k-1\text{ times}),\qquad
+ \mu+m\nu=q(t+mu)^2+mr v^2\quad(\text{once}).
+\end{equation}
+
+\paragraph{The range $m<n<m^3-m$.}
+Write $n=mq+r$, $0\le r<m$, and put
+\[
+ a=\frac1{\sqrt{mn}},\quad b=\frac{1-a}{m^2-1},\quad
+ t=\frac b{\sqrt q},\quad u=a^2-\frac b{m\sqrt q},\quad v=a^2.
+\]
+Here $1\le q\le m^2-2$. We check $u\ge0$ rather than assuming
+positivity from the desired spectrum. Let $K=m^2-2$. The convex quadratic
+$g(z)=[m(z+1)-1]^2-m^4z$ is nonpositive for $1\le z\le K$:
+$g(1)\le0$ because $2m-1\le m^2$, while
+\[
+ -g(K)=2m^3-m^2-2m-1\ge3m^2-2m-1>0 \quad(m\ge2).
+\]
+Since $n\le m(q+1)-1$, this proves $n\le m^2\sqrt q$.
+Consequently
+\[
+ \frac n{\sqrt q}-\sqrt{\frac n{mq}}\le m^2-1.
+\]
+Multiplying out the definition of $u$ shows that this inequality is exactly
+$u\ge0$. Also $t,v\ge0$ and $t+mu=ma^2$.
+Equations~\eqref{trace}--\eqref{eigen}, with $mn a^2=1$, now give
+$\tr\rho=1$, $\mu=b^2$, and $\mu+m\nu=a^2$.
+
+\paragraph{Supported blocks.}
+More generally, suppose $1\le q\le m^2$ and $mq\le n$.
+Take $r=n-mq$ and use
+\[
+ a=\frac1{m\sqrt q},\quad b=\frac{1-a}{m^2-1},\quad
+ t=\frac b{\sqrt q},\quad u=a^2-\frac b{m\sqrt q},\quad v=0.
+\]
+The condition $u\ge0$ is equivalent to $b\le a$, which follows from
+$\sqrt q\le m$. Again \eqref{trace}--\eqref{eigen} give trace one and
+squared singular values $a^2,b^2,\ldots,b^2$, using $m^2q a^2=1$.
+In the middle range of \eqref{choose-a}, take $q=m^2-1$; in the last
+range take $q=m^2$. The latter gives $a=b=1/m^2$, $u=v=0$, and
+$t=1/m^3$. In all ranges the trace norm is $a+(m^2-1)b=1$.
+
+\paragraph{The strict comparison.}
+In the first range, $a\ge1/m^2$, and $a<\delta$ follows from
+\[
+ (\sqrt{mn}-1)^2-(m-1)(n-1)=(\sqrt n-\sqrt m)^2>0.
+\]
+Indeed $\sqrt{mn}-1>0$, so this is equivalent to
+$\sqrt{(m-1)(n-1)}<\sqrt{mn}-1$.
+For the supported middle range, $a>1/m^2$. If $m\ge3$, then
+$\sqrt{m^2-1}>2$, so $a<1/(2m)<\delta$ by \eqref{delta-half}.
+For $m=2$, the exact comparisons
+\[
+ \frac1{2\sqrt3}<\frac7{24}<1-\frac1{\sqrt2}<\delta
+\]
+follow by squaring positive quantities: $144<147$ and $288<289$.
+For the last range, $a=1/m^2<\delta$ already follows from
+\eqref{delta-half}. Thus $1/k\le a<\delta<1$ in all three cases.
+Lemma~\ref{scalar} gives $\F(\delta)<\F(a)$, completing the proof of
+Theorem~\ref{main}.
+
+\begin{corollary}\label{entangled}
+For each $2\le m<n$ there is an entangled state satisfying CCNR whose
+degree-$\ell$ realignment elementary symmetric function exceeds the
+separable maximum simultaneously for all $\ell=2,\ldots,m^2$.
+For degree one, $B_1(m,n)=\widetilde B_1(m,n)=1$.
+\end{corollary}
+\begin{proof}
+Use Theorem~\ref{main}; separability would contradict any one of its strict
+inequalities. For degree one CCNR gives the upper bound one, attained by
+a pure product state.
+\end{proof}
+
+\section{Sibling questions and consequences}
+The answer to (P2) has a complete dimension dichotomy. Some associated
+extremal formulas were already obtained in the posing papers; the following
+statements separate those formulas from the unequal-dimensional separation.
+
+\begin{corollary}\label{classification}
+For $m,n\ge2$ and $2\le\ell\le\min(m,n)^2$, the answer to (P2) is
+yes exactly when $m\ne n$. If $m=n$, then
+\[
+ B_\ell(m,m)=\widetilde B_\ell(m,m)
+ =\F(1/m),\qquad k=m^2.
+\]
+In particular, the exact values at $m=n=2$ and degrees $1,2,3,4$ are
+$1,1/3,5/108,1/432$.
+\end{corollary}
+\begin{proof}
+Swapping the two tensor factors transposes the realignment, up to
+permutations, and hence preserves its singular values. Thus
+Theorem~\ref{main} covers both unequal orders.
+For equal dimensions, the tail bound has $\delta=1/m$ and gives
+$B_\ell\le\F(1/m)$. For every density matrix, testing its realignment
+against $\operatorname{vec}(I_m)/\sqrt m$ and
+$\operatorname{vec}(I_n)/\sqrt n$ gives $s_1\ge1/\sqrt{mn}$.
+Consequently, in equal dimensions, CCNR gives
+$\sum_{j\ge2}s_j\le1-1/m$, and Lemma~\ref{scalar} bounds
+$\widetilde B_\ell$ by the same value.
+The separable state
+\[
+ \frac{I_{m^2}+|\Omega\rangle\langle\Omega|}{m(m+1)},
+ \qquad \Omega=\sum_{i=1}^m|ii\rangle,
+\]
+attains it: it is the uniform unit-vector average of
+$|u\rangle\langle u|\otimes|\bar u\rangle\langle\bar u|$, and its
+realignment spectrum is $1/m,1/(m(m+1)),\ldots,1/(m(m+1))$.
+The averaging identity follows from
+$\mathbb E[u_i\bar u_j\bar u_a u_b]
+=(\delta_{ij}\delta_{ab}+\delta_{ia}\delta_{jb})/(m(m+1))$.
+An average belongs to the compact convex hull of product states.
+This recovers Li--Poon--Sze's Theorem~2.4, including the two-qubit values
+estimated in \cite[Table~1]{LAS}. Degree one is Corollary~\ref{entangled}.
+\end{proof}
+
+\begin{corollary}\label{naive}
+Let $2\le m\le n$ and $2\le\ell\le k=m^2$. The naive CCNR upper
+bound $\binom{k}{\ell}k^{-\ell}$ is attained if and only if $n\ge m^3$.
+For $n<m^3$, writing $\alpha=1/\sqrt{mn}$ gives
+\[
+ \widetilde B_\ell(m,n)\le\F(\alpha)
+ <\binom{k}{\ell}k^{-\ell}.
+\]
+\end{corollary}
+\begin{proof}
+Averaging all coordinates under the constraint $\sum s_j\le1$ gives
+the naive bound. If $n<m^3$, then $s_1\ge\alpha>1/k$ as above,
+so the tail sum is at most $1-\alpha$. Apply Lemma~\ref{scalar};
+strict monotonicity compares $\alpha$ to $1/k$.
+If $n\ge m^3$, the uniform witness in the proof of
+Theorem~\ref{main} attains the bound.
+The strict side recovers \cite[Proposition~4]{LAS}, whose condition
+$D<d^3$ becomes $n<m^3$; the attained side is
+\cite[Theorem~2.3]{LPS}.
+\end{proof}
+
+For the exact-maxima question (P1), Li--Poon--Sze already prove
+\cite[Theorem~2.3]{LPS}
+\begin{equation}\label{known-maxima}
+ \widetilde B_\ell(m,n)=
+ \begin{cases}
+ \F(1/\sqrt{mn}),&m\le n\le m^3-m/2,\\
+ \binom{k}{\ell}k^{-\ell},&n\ge m^3.
+ \end{cases}
+\end{equation}
+In particular, at $(m,n)=(2,3)$ our bound gives
+$B_\ell(2,3)\le F_{4,\ell}(1-1/\sqrt3)
+<F_{4,\ell}(1/\sqrt6)=\widetilde B_\ell(2,3)$.
+This proves the strict comparison suggested by \cite[Table~2]{LAS},
+without assigning exact values to that table's numerical separable maxima.
+For the exceptional case highlighted in \cite[p.~9]{LPS},
+the supported witness gives the explicit bracket
+\[
+ B_\ell(3,26)\le F_{9,\ell}(1-5/\sqrt{39})
+ <F_{9,\ell}(1/\sqrt{72})
+ \le\widetilde B_\ell(3,26)\le F_{9,\ell}(1/\sqrt{78}).
+\]
+The exact CCNR maximum in $m^3-m/2<n<m^3$, and exact unequal-dimensional
+separable maxima, are not determined by these bounds.
+
+\begin{corollary}\label{interior}
+In every unequal dimension pair there are positive definite density matrices
+with $\|\R(\rho)\|_1<1$ and
+$\e_\ell(s(\R(\rho)))>B_\ell(m,n)$ simultaneously for all
+$2\le\ell\le\min(m,n)^2$.
+More precisely, for $m<n$, take the witness of Theorem~\ref{main} and put
+\[
+ \varepsilon_0=\frac12\min_{2\le\ell\le k}
+ \frac{1- F_{k,\ell}(\delta)/F_{k,\ell}(a)}{\ell}>0.
+\]
+Every $\rho_\varepsilon=(1-\varepsilon)\rho+
+\varepsilon I_{mn}/(mn)$ with $0<\varepsilon\le\varepsilon_0$
+has these properties.
+\end{corollary}
+\begin{proof}
+The least eigenvalue is at least $\varepsilon/(mn)>0$, and convexity gives
+\[
+ \|\R(\rho_\varepsilon)\|_1
+ \le1-\varepsilon+\varepsilon/\sqrt{mn}<1.
+\]
+Substitute $t_\varepsilon=(1-\varepsilon)t$,
+$u_\varepsilon=(1-\varepsilon)u+\varepsilon/(mn)$, and
+$v_\varepsilon=(1-\varepsilon)v+\varepsilon/(mn)$ in \eqref{gram}.
+Using $t+mu=ma^2$, the realignment singular values are
+\[
+ a_\varepsilon=
+ \sqrt{(1-\varepsilon)^2a^2+(2\varepsilon-\varepsilon^2)/(mn)},
+ \qquad b_\varepsilon=(1-\varepsilon)b_a
+ \quad(k-1\text{ times}).
+\]
+For the main construction the formula uses $mn a^2=1$; for the supported
+construction it uses $r v=0$ and $m^2q a^2=1$.
+Thus $a_\varepsilon\ge(1-\varepsilon)a$, so coordinatewise monotonicity
+and homogeneity give
+\[
+ \e_\ell(s(\R(\rho_\varepsilon)))
+ \ge(1-\varepsilon)^\ell F_{k,\ell}(a)
+ \ge(1-\ell\varepsilon)F_{k,\ell}(a)>F_{k,\ell}(\delta).
+\]
+The last inequality follows from the definition of $\varepsilon_0$;
+the middle one is Bernoulli's inequality. Apply Theorem~\ref{main}.
+\end{proof}
+
+The same states give a channel consequence of
+\cite[Section~5, equations~(38)--(43)]{LAS}. A channel is a completely
+positive trace-preserving linear map between matrix spaces; it is
+entanglement breaking if its action on one part of any bipartite state
+always gives a separable state.
+
+\begin{corollary}\label{channels}
+For every $2\le m<n$ there is a channel $\Phi:M_m(\mathbb C)\to
+M_n(\mathbb C)$ which is not entanglement breaking, although its
+Hilbert--Schmidt matrix has singular-value sum at most $m$.
+At every degree $2\le\ell\le m^2$, its elementary symmetric value
+exceeds the upper bound $m^\ell F_{m^2,\ell}(\delta)$ valid for
+entanglement-breaking channels. The sum can be made strictly smaller
+than $m$, with a positive definite normalized Choi matrix.
+\end{corollary}
+\begin{proof}
+For each block state above,
+$\operatorname{Tr}_B\rho=[q(t+mu)+rv]I_m=I_m/m$.
+Thus $\Phi(X)=m\operatorname{Tr}_A[(X^T\otimes I_n)\rho]$
+is a channel with normalized Choi matrix $\rho$.
+Its Hilbert--Schmidt matrix is $m\R(\rho)^T$, so its singular values
+are $m$ times those of $\R(\rho)$.
+An entanglement-breaking channel has separable normalized Choi matrix;
+Lemma~\ref{tail} and Lemma~\ref{scalar} give the stated upper bound.
+Theorem~\ref{main} and Corollary~\ref{interior} give the strict
+comparisons and the positive definite variant.
+\end{proof}
+
+\section{Coverage and mathematical evidence}
+{\small
+\begin{longtable}{@{}p{.43\linewidth}p{.53\linewidth}@{}}
+\toprule Source item & Coverage\\\midrule\endhead
+Li--Poon--Sze, p.~4 (P2), unequal dimensions &
+Answered: yes. Theorem~\ref{main}, in both tensor orders; one witness
+for all nontrivial degrees.\\
+Li--Poon--Sze (P2), equal dimensions & Answered: no.
+Reproved; prior proof Li--Poon--Sze (2011), Theorem~2.4.
+Corollary~\ref{classification}.\\
+Lupo--Aniello--Scardicchio, Section~6(ii), p.~15 &
+Answered: yes in unequal dimensions; no in equal dimensions.\\
+Aniello--Lupo, Section~4, p.~8, independent stricter bounds &
+Answered: yes in unequal dimensions, by Theorem~\ref{main}; the
+equal-dimensional obstruction is Corollary~\ref{classification}.\\
+Lupo--Aniello--Scardicchio, Section~8, p.~18, conjecture on existence
+of strengthened independent criteria & Proved in every unequal dimension
+pair, by Theorem~\ref{main}.\\
+Lupo--Aniello--Scardicchio, Proposition~4, naive upper bound &
+Reproved; prior proof Lupo--Aniello--Scardicchio (2008) for $n<m^3$;
+Li--Poon--Sze (2011) for $n\ge m^3$. Corollary~\ref{naive}.\\
+Lupo--Aniello--Scardicchio, Tables~1--2 & Table~1 values:
+reproved, prior proof Li--Poon--Sze (2011). Table~2 strict comparison:
+proved; exact separable values not covered.\\
+Li--Poon--Sze (P1); Lupo--Aniello--Scardicchio Section~6(i) &
+Prior proof cited for \eqref{known-maxima}; exact remaining CCNR maxima
+and unequal-dimensional separable maxima not covered.\\
+Li--Poon--Sze, p.~9, $(3,26)$ & Explicit bracket above;
+the exact maximum not covered.\\
+Peled et al., Theorem~1 and its proposed unrestricted extension &
+FNF bound: prior proof cited. Removing FNF from that stronger bound:
+not covered.\\
+Full rank and strict CCNR inequality & Not posed in the primary source;
+proved, Corollary~\ref{interior}.\\
+Lupo--Aniello--Scardicchio, Section~5, channel formulation &
+Not posed as an existence question there; proved consequence,
+Corollary~\ref{channels}.\\\bottomrule
+\end{longtable}}
+
+Theorem~\ref{main} and the corollaries have written proofs above;
+\eqref{known-maxima} is a cited prior result.
+The accompanying \texttt{verify.py} checks exact trace and realignment
+row-Gram identities, polynomial identities, and rational interval comparisons
+for the listed block-state and white-noise examples. Its finite ranges and
+interval precision are specified in \texttt{verification.json}.
+
+At the pinned source revision, the declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806}{\texttt{LiPoonSzeP2.result}}
+states, for each $m,n,\ell$ in the theorem's ranges, the existence of an
+actual complex density matrix satisfying CCNR and exceeding a common upper
+bound for every separable state's degree-$\ell$ value.
+Its quantifiers are $\forall m,n,\ell\;\exists\rho$.
+The same file's \texttt{main\_witness} ($n<m^3-m$),
+\texttt{supported\_witness} ($1\le q\le m^2$, $mq\le n$), and
+\texttt{uniform\_witness} ($n\ge m^3$) specify the three spectra
+independently of $\ell$; the written argument assembles one simultaneous
+witness. The definitions of \texttt{realign}, \texttt{singularVector},
+\texttt{esymmSV}, and the separable profile bound are in
+\href{https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/RealignmentSchurBound.lean#L924}{\texttt{RealignmentSchurBound.lean}}:
+\texttt{separable\_esymm\_bound} gives $\e_\ell\le F_{k,\ell}(\delta)$.
+The covariance and marginal-purity tail inequalities in
+\href{https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/CorrelationMinorNormCovariance.lean#L162}{\texttt{CorrelationMinorNormCovariance.lean}}
+are \texttt{actual\_covariance\_nuclear} and
+\texttt{correlation\_tail\_purity}; they concern correlation matrices
+in orthonormal Hermitian bases, which have the realignment singular values.
+The full-rank white-noise extension, channel consequence and
+equal-dimensional averaging argument are written proofs here, separate
+from those declarations.
+
+\begin{thebibliography}{9}
+\bibitem{LAS} C.~Lupo, P.~Aniello and A.~Scardicchio,
+\emph{Bipartite quantum systems: on the realignment criterion and beyond},
+J.~Phys.~A: Math.~Theor. \textbf{41} (2008), 415301.
+\href{https://doi.org/10.1088/1751-8113/41/41/415301}{doi:10.1088/1751-8113/41/41/415301};
+\href{https://arxiv.org/abs/0802.2019v2}{arXiv:0802.2019v2}.
+\bibitem{LPS} C.-K.~Li, Y.-T.~Poon and N.-S.~Sze,
+\emph{A note on the realignment criterion},
+J.~Phys.~A: Math.~Theor. \textbf{44} (2011), 315304.
+\href{https://doi.org/10.1088/1751-8113/44/31/315304}{doi:10.1088/1751-8113/44/31/315304};
+\href{https://arxiv.org/abs/1103.2499v2}{arXiv:1103.2499v2}.
+\bibitem{ZZZG} C.-J.~Zhang, Y.-S.~Zhang, S.~Zhang and G.-C.~Guo,
+\emph{Entanglement detection beyond the computable cross-norm or
+realignment criterion}, Phys.~Rev.~A \textbf{77} (2008), 060301(R).
+\href{https://doi.org/10.1103/PhysRevA.77.060301}{doi:10.1103/PhysRevA.77.060301};
+\href{https://arxiv.org/abs/0709.3766v6}{arXiv:0709.3766v6}.
+\bibitem{PTCC} B.~Y.~Peled, A.~Te'eni, A.~Carmi and E.~Cohen,
+\emph{Correlation minor norms, entanglement detection and discord},
+Scientific Reports \textbf{11} (2021), 2849.
+\href{https://doi.org/10.1038/s41598-021-82303-3}{doi:10.1038/s41598-021-82303-3};
+\href{https://arxiv.org/abs/2005.12079}{arXiv:2005.12079}.
+\bibitem{AL} P.~Aniello and C.~Lupo,
+\emph{On the relation between Schmidt coefficients and entanglement},
+Open Syst.~Inf.~Dyn. \textbf{16} (2009), 127--143.
+\href{https://doi.org/10.1142/S1230161209000104}{doi:10.1142/S1230161209000104};
+\href{https://arxiv.org/abs/0812.4167v1}{arXiv:0812.4167v1}.
+\bibitem{GGHE} O.~Gittsovich, O.~G\"uhne, P.~Hyllus and J.~Eisert,
+\emph{Unifying several separability conditions using the covariance
+matrix criterion}, Phys.~Rev.~A \textbf{78} (2008), 052319.
+\href{https://doi.org/10.1103/PhysRevA.78.052319}{doi:10.1103/PhysRevA.78.052319};
+\href{https://arxiv.org/abs/0803.0757v3}{arXiv:0803.0757v3}.
+\bibitem{LTPCC} R.~Lenny, A.~Te'eni, B.~Y.~Peled, A.~Carmi and E.~Cohen,
+\emph{Multipartite entanglement detection via correlation minor norm},
+Quantum Inf.~Process. \textbf{22} (2023), 292.
+\href{https://doi.org/10.1007/s11128-023-04046-6}{doi:10.1007/s11128-023-04046-6};
+\href{https://arxiv.org/abs/2302.00650v1}{arXiv:2302.00650v1}.
+\bibitem{DKC} S.~Deside, V.~Kala and N.~J.~Cerf,
+\emph{Entanglement detection from moments of the realigned state:
+application to continuous-variable quantum systems},
+\href{https://arxiv.org/abs/2611.17021v1}{arXiv:2611.17021v1} (2026).
+\end{thebibliography}
+\medskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}

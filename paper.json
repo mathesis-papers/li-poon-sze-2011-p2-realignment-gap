@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24484269",
     "current_version": 3,
     "doi": "10.5281/zenodo.24484270",
+    "kind": "note",
     "lean_source": {
       "revision": "d13f56f01c2e4710683d27a74c67cba9ec344e19",
       "url": "https://github.com/the-omega-institute/trureturing/blob/d13f56f01c2e4710683d27a74c67cba9ec344e19/D5/S3/Quantum/Entanglement/Witness/LiPoonSzeP2.lean#L806"
@@ -55,10 +56,12 @@
     "title": "Extending Li–Poon–Sze's elementary-symmetric realignment comparison to unequal dimensions",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T22:16:59.929144535Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "li-poon-sze-2011-p2-realignment-gap"
